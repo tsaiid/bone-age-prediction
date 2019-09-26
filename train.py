@@ -73,8 +73,7 @@ gender_str_col = 'male'
 base_bone_dir = os.path.join('rsna-bone-age')
 boneage_df = pd.read_csv(os.path.join(base_bone_dir, 'boneage-training-dataset.csv'))
 boneage_df['path'] = boneage_df['id'].map(lambda x: os.path.join(base_bone_dir,
-                                                         'boneage-training-dataset', 
-                                                         'boneage-training-dataset', 
+                                                         'boneage-training-dataset',
                                                          '{}.png'.format(x)))
 
 boneage_df['exists'] = boneage_df['path'].map(os.path.exists)
